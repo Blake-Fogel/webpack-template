@@ -31,8 +31,12 @@ module.exports = {
         {
             test: /\.(png|svg|jpg|jpeg|gif)$/i,
             type: "asset/resource",
+        },
+        {
+            test: /\.svg$/i,
+            resourceQuery: /raw/, // only triggers if you use `?raw`
+            type: 'asset/source', // gives you raw content as string
         }
-
         ],
     },
 };
